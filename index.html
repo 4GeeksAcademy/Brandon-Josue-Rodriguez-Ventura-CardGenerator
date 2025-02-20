@@ -35,38 +35,7 @@
             <div class="col-2" style="background-color: #582a03; height: 100vh;"> </div>
         </div>
     </div>
-    <script>
-        let RandomIcon = ["fa-solid fa-diamond", "fa-solid fa-heart", "fa-solid fa-spa", "fa-brands fa-canadian-maple-leaf"];
-let RandomNumber = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
-
-function generarCarta() {
-    let randomIndex = Math.floor(Math.random() * RandomIcon.length);
-    let iconClass = RandomIcon[randomIndex];
-    let number = RandomNumber[Math.floor(Math.random() * RandomNumber.length)];
-
-    let iconoElement = document.getElementById("icono");
-    let iconoAbajoElement = document.getElementById("icono-abajo");
-
-    iconoElement.innerHTML = `<i class="${iconClass}"></i>`;
-    iconoAbajoElement.innerHTML = `<i class="${iconClass}"></i>`;
-
-    let numberElement = document.getElementById("Number");
-    numberElement.innerHTML = number;
-
-
-    let esRojo = iconClass.includes("diamond") || iconClass.includes("heart");
-    let color = esRojo ? "red" : "black";
-
-    iconoElement.style.color = color;
-    iconoAbajoElement.style.color = color;
-    numberElement.style.color = color;
-
-    alert("Se que los iconos de Pica y Trebol no son los correspondientes pero los otros ya son de paga");
-}
-
-window.onload = generarCarta;
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+    <script src="app.js"></script>
 </body>
 </html>
